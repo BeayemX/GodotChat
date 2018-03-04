@@ -16,3 +16,9 @@ func send_message(text):
 
 func change_username(new_name):
 	username = new_name
+
+func create_server():
+	NetworkManager.create_server()
+
+func connect_to_server(ip_address):
+	NetworkManager.connect_to_server(ip_address)

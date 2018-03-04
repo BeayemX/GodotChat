@@ -1,5 +1,7 @@
 extends HBoxContainer
 
+onready var chat = get_node("../..")
+
 onready var input = get_node("TextInput")
 onready var join_button = get_node("JoinButton")
 onready var host_button = get_node("HostButton")
@@ -22,8 +24,11 @@ func _on_text_entered(text):
 
 func _connect(ip_address):
 	print("Connecting to ", ip_address)
+	chat.connect_to_server(ip_address)
 
 func _create_server():
 	var addr = IP.get_local_addresses()[1]
 	print("Creating server on ", addr)
 	input.text = addr
+
+	chat.create_server()

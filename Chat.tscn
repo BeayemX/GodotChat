@@ -8,6 +8,7 @@
 
 [node name="Chat" type="Control" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
