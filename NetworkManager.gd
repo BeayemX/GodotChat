@@ -28,21 +28,21 @@ func terminate_network():
 
 # called for every new player on every player
 func _on_network_peer_connected(id):
-	print("_on_network_peer_connected ", id)
+	Debug.log_message("_on_network_peer_connected: " + str(id))
 	#my_info["name"] = "Johnson Magenta"
 
 func _on_network_peer_disconnected(id):
-	print("_on_network_peer_disconnected")
+	Debug.log_message("_on_network_peer_disconnected: " + str(id))
 	# connected_players.erase(id) # Erase player from info
 
 # Only called on clients, not server. Send my ID and info to all the other peers
 func _on_connected_to_server():
-	print("_on_connected_to_server")
+	Debug.log_message("_on_connected_to_server")
 
 func _on_connection_failed():
-	print("_on_connection_failed")
+	Debug.log_message("_on_connection_failed")
 	pass # Could not even connect to server, abort
 
 func _on_server_disconnected():
-	print("_on_server_disconnected")
+	Debug.log_message("_on_server_disconnected")
 	pass # Server kicked us, show error and abort

@@ -7,6 +7,9 @@ var message_spacing = "    "
 var last_user = ""
 var last_time = ""
 
+func _ready():
+	Debug.register_as_target(self)
+
 func handle_new_message(msg):
 	var time = OS.get_datetime()
 	var h = "%02d" % time["hour"]
