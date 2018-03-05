@@ -9,6 +9,7 @@ func _ready():
 	get_tree().connect("connected_to_server", self, "_on_connected_to_server")
 	get_tree().connect("connection_failed", self, "_on_connection_failed")
 	get_tree().connect("server_disconnected", self, "_on_server_disconnected")
+
  # public interfac
 func create_server():
 	var peer = NetworkedMultiplayerENet.new()

@@ -4,12 +4,11 @@ onready var messages = get_node("VBoxContainer/Messages")
 
 var username = "UserName"
 
-func on_new_message(msg):
+sync func on_new_message(msg):
 	messages.handle_new_message(msg)
 
 func send_message(text):
-	# TODO send over network
-	on_new_message({
+	rpc("on_new_message", {
 		"user": username,
 		"text" : text
 	})
