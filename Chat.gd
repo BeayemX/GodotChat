@@ -6,6 +6,7 @@ var username = "UserName"
 
 sync func on_new_message(msg):
 	messages.handle_new_message(msg)
+	print(msg["user"], ": ", msg["text"])
 
 func send_message(text):
 	rpc("on_new_message", {
