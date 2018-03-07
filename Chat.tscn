@@ -6,7 +6,7 @@
 [ext_resource path="res://MessageView.gd" type="Script" id=4]
 [ext_resource path="res://InputLine.gd" type="Script" id=5]
 
-[node name="Chat" type="Control"]
+[node name="Chat" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
