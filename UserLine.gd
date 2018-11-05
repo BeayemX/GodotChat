@@ -8,7 +8,7 @@ onready var change_username_button = get_node("ChangeButton")
 func _ready():
 	change_username_button.connect("pressed", self, "_on_change_username_button_pressed")
 	input.connect("text_entered", self, "_on_text_entered")
-	
+
 	var userpath = OS.get_user_data_dir()
 
 	# remove everything before first slash
@@ -19,7 +19,7 @@ func _ready():
 	# remove everything after next slash
 	if userpath.find("/") > 0:
 		userpath = userpath.substr(0, userpath.find("/"))
-	if userpath: 
+	if userpath:
 		input.text = userpath
 		chat.change_username(input.text)
 
